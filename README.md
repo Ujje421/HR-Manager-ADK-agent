@@ -1,9 +1,13 @@
 🤖 AI HR Email Auto-Responder
 
 This project connects a Gmail inbox with an AI HR Agent (ADK-based) to automatically read employee emails and send intelligent HR-style replies such as:
+
 Welcome emails
+
 Login credential guidance
+
 Leave clarification requests
+
 General HR onboarding help
 
 The system ensures clean human-readable emails are sent — even if the AI agent returns JSON.
@@ -11,10 +15,15 @@ The system ensures clean human-readable emails are sent — even if the AI agent
 🚀 How It Works
 
 An incoming employee email is received.
+
 The email text is sent to the HR AI Agent running on ADK.
+
 The AI generates a response (sometimes in JSON format).
+
 The system extracts:
+
 subject
+
 body
 
 A properly formatted email is sent back to the employee via Gmail SMTP.
@@ -30,15 +39,22 @@ A properly formatted email is sent back to the employee via Gmail SMTP.
 🛠 Requirements
 
 Python 3.10+
+
 A running ADK agent server
+
 Gmail account with App Password enabled
+
 Install dependencies:
+
 pip install requests
+
+
 (Other libraries like smtplib and email come built into Python.)
 
 ⚙️ Environment Variables
 
 Set these before running:
+
 Variable	Description
 ADK_BASE_URL	URL of your ADK server (default: http://localhost:8000
 )
@@ -73,7 +89,10 @@ The system automatically detects and formats both correctly.
 
 ▶️ Running the Script
 python your_script_name.py
+
+
 Example test inside the script:
+
 incoming_text = "Hi HR, I need my login credentials and welcome kit."
 sender = "employee@example.com"
 session = "session123"
@@ -88,24 +107,37 @@ Step	Action
 🛡 Error Handling
 
 The system safely handles:
+
 ADK server failures
+
 Network timeouts
+
 Invalid JSON from agent
+
 Empty responses
+
 "IGNORE_EMAIL" signals
+
 If something goes wrong, the email is skipped instead of crashing.
 
 🔮 Future Improvements
 
 Connect to real Gmail inbox via IMAP listener
+
 Add HTML email formatting
+
 Store email logs in a database
+
 Add multiple HR agents (Payroll, IT Support, etc.)
+
 Web dashboard for monitoring conversations
 
-👨‍💻 Author - Ujjwal Jagtap
+👨‍💻 Author
 
 Built as an AI HR Automation System using:
+
 Python
+
 Gmail SMTP
+
 ADK Agent Framework
