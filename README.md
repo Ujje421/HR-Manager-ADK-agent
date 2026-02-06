@@ -138,6 +138,7 @@ If something goes wrong, the email is skipped instead of crashing.
 
 ## 👨‍💻 Author
 Developer - Ujjwal Jagtap
+
 Built as an AI HR Automation System using:
 - Python
 - Gmail SMTP
